@@ -1,16 +1,7 @@
-x = 15
+user_age = input("Enter your age: ")
 
-print(x)
+years = int(user_age)
 
-price = 9.999
-print(type(price))
+months = years * 12
 
-
-a = 25
-b = a
-
-print(a)
-print(b)
-
-print(type(a))
-print(type(b))
+print(f"Your age, {years}, is equal to {months} months.")
