@@ -1,6 +1,4 @@
-user_age = input("Enter your age: ")
-
-years = int(user_age)
+years = int(input("Enter your age in years: "))
 
 months = years * 12
 
