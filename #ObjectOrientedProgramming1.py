@@ -17,9 +17,14 @@
 ## Let's do the above, but in Object-Oriented way:
 
 class Student:
-     def __init__(self): # important and special we refer to ourselfs.
-         self.name = "Rolf",
-         self.age = 23
+    ## the __init__ method is always called first.
+    def __init__(self, name, grades): # important and special we refer to ourselfs.
+         self.name = name
+         self.grades = grades 
+    
+    def average_grade(self): # init method runs and you get a new object. When you call 
+        return sum(self.grades) / len(self.grades)  
 
-student = Student()  #runs the "init" method to create a new object. A funciton in a class is a method.
-
+student = Student("Bob", [80, 92, 76, 56, 100])  #runs the "init" method to create a new object. A funciton in a class is a method.
+print(student.name)
+print(student.average_grade())
