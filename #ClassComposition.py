@@ -3,6 +3,7 @@
 ## Composition is used ALOT
 ## Class that contains many classses...
 ## For instance a Bookshelf has many Books.
+## Inheritance versus Composition: "is" versus "has".
 
 class BookShelf:
     def __init__(self, *books):
