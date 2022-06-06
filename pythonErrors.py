@@ -9,10 +9,18 @@ def divide(dividend, divisor):
 
 
 
+# grades = []
 grades = [78, 99, 85, 100]
 print(len(grades))
 
 print("Welcome to the average grade program.")
-average = divide(sum(grades), len(grades))
-
-print(f"the average grade is {average}.")
+try:
+    average = divide(sum(grades), len(grades))
+except ZeroDivisionError as e:
+    print(e)
+    print("There are no grades yet in your list.")
+else:
+    # Assuming no error in "try", then do our payload    
+    print(f"the average grade is {average}.")
+finally:
+    print("thanks!")
