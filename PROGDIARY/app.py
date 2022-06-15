@@ -8,13 +8,8 @@ Your selection: """
 
 welcome = "Welcome to the programming diary!"
 
-entries = [
-    {"content": "Today I started learning python", "date": "2020-01-01"},
-    {"content": "I create my first database", "date": "2020-02-01"},
-    {"content": "I finished writing my programming diary app", "date": "2020-03-01"},
-    {"content": "I finished writing my prog diary today!", "date": "2020-04-01"},
-    {"content": "Today I'm continuing my learning on programming", "date": "2020-04-02"},
-] 
+
+
 
 print(welcome)
 
