@@ -6,7 +6,14 @@
 #     {"content": "Today I'm continuing my learning on programming", "date": "2019-04-02"},
 # ] 
 import sqlite3
-connection = sqlite3.connect("data.db")
+
+entries = []
+
+try:
+    connection = sqlite3.connect('.\PROGDIARY\data.db')
+    print("Connection made to database.")
+except:
+    print("Could not connect to database.")
 
 def create_table():
     with connection:  # uses context manager to handle commit/rollback of the transaction.
