@@ -1,6 +1,7 @@
 
 import sqlite3
-connection = sqlite3.connect("./data.db")
+connection = sqlite3.connect("./data.db") # we use nondefault get row method in order to get dictionary instead of tuple.
+connection.row_factory = sqlite3.Row
 
 # entries = [] 
 
@@ -15,4 +16,5 @@ def add_entry(entry_content, entry_date):
         connection.execute("INSERT INTO entries VALUES (?,?);", (entry_content, entry_date))
 
 def get_entries():
-    entries = connection.execute("SELECT * from entries;")
+    cursor = connection.execute("SELECT * from entries;")
+    return cursor
